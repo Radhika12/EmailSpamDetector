@@ -1,0 +1,51 @@
+{
+  "headers": [{
+    "name": "Subject",
+    "value": "An email"
+  },
+    {
+      "name": "Date",
+      "value": "Thu, 4 Mar 2010 15:35:32 -0800"
+    },
+    {
+      "name": "From",
+      "value": "george@foo.com"
+    },
+    {
+      "name": "To",
+      "value": "paul@goo.com"
+    }, {
+      "name": "Sender",
+      "value": "paul@goo.com"
+    }, {
+      "name": "Reply-to",
+      "value": "paul@goo.com"
+    }
+  ],
+  "from": "From blah blah...",
+  "body": {
+    "type": "multipart/alternative",
+    "parts": [{
+      "type": "text",
+      "text": "Dear Jason, "
+    },
+      {
+        "type": "text",
+        "text": "This is a "
+      },
+      {
+        "type": "url",
+        "href": "http://www.foo.bar.rad.spam.com",
+        "text": "URL."
+      },
+      {
+        "type": "text",
+        "text": "Please open it at your convenience."
+      },
+      {
+        "type": "signature",
+        "text": "Radhika Yadav"
+      }
+    ]
+  }
+}
