@@ -1,5 +1,6 @@
 package strategy;
 
+import model.BodyPart;
 import model.Email;
 import model.EmailSpamValidationResult;
 
@@ -8,9 +9,9 @@ import model.EmailSpamValidationResult;
  */
 public class PresenceOfJavascriptPolicy implements SpamDetectionPolicy {
 
-    @Override
+	@Override
     public EmailSpamValidationResult validate(Email email) {
+    	 return null;
         //TODO: Check for presence of any <script> tag.
-        return null;
     }
 }

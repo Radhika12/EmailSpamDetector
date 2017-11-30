@@ -13,13 +13,12 @@ import java.util.List;
  */
 public class KeywordsDetectionPolicy implements SpamDetectionPolicy {
 
-    private static final List<String> keywords = new ArrayList<>();
-
+    private List<String> keywords = new ArrayList<>();
+   
     public KeywordsDetectionPolicy() {
         keywords.addAll(Arrays.asList("Update", "Confirm", "User", "Customer","Client",
                                         "Suspend","Restrict", "Hold", "Verify", "Account",
                                         "Login", "Username", "Password", "SSN", "Social Security"));
-
     }
 
     @Override
@@ -46,4 +45,5 @@ public class KeywordsDetectionPolicy implements SpamDetectionPolicy {
         result.setDetailedAnalysis(analysisResult.toString());
         return result;
     }
+   
 }

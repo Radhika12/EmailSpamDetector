@@ -24,13 +24,13 @@ public class NumberOfSubdomainsPolicy implements SpamDetectionPolicy {
             for (BodyPart bodyPart : email.getBody().getParts()) {
                 if (bodyPart.getType().equals("url") && bodyPart.getHref() != null) {
                     String domain = bodyPart.getHref().replaceAll(regex, "");
-                    if(domain.split("\\.").length >= 5) {
+                    if(domain.split("\\.")	.length >= 5) {
                     	result.setSpam(true);
                         analysisResult.append("Body part contains a url '"+bodyPart.getHref()+"' with 5 or more subdomains. \n");
                     }
                 }
             }
-        }
+        } 
 
         result.setDetailedAnalysis(analysisResult.toString());
         return result;
